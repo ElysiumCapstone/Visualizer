@@ -1,0 +1,303 @@
+/* BACKGROUND */
+html{
+  background: url(media/Tipping_Point_Edited.png) no-repeat center center fixed;
+  font-family: 'Heebo';
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+}
+
+/* BUTTON TO SIMULATE */
+
+#createSimulation{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  top: 30px;
+  background:#2e2e2e;
+  height: 80%;
+  margin-top: 10%;
+  width: 95%;
+}
+
+.option {
+  width: 100%;
+}
+
+.slider {
+
+  width: 75%;
+  height: 5px;
+
+  margin-top: 2vh;
+  margin-bottom: 3vh;
+  margin-left: 15%;
+
+  background: linear-gradient(to right, #2EFFCD 0%, #2EFFCD 50%, #414C53 50%, #414C53 100%);
+  border-radius: 8px;
+
+  outline: none;
+  transition: white 450ms ease-in;
+  -webkit-appearance: none;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 11px;
+  height: 11px;
+  box-shadow: 0 0 0 10px rgba(65, 76, 83, 0.541);
+  border-radius: 50%;
+  background: #2EFFCD;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#simulate {
+    border: none;
+    color: #2EFFCD;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    left: 15%;
+    align-content: center;
+    background: #242424;
+box-shadow: 0px 10px 12px rgba(27, 27, 27, 0.51);
+border-radius: 59px;
+}
+
+#simulate:hover{
+    background-color: rgb(61, 61, 61);
+}
+
+/* BOTTOM PANNEL */
+
+.sidepanel  {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    height: 30%;
+    overflow: hidden;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #24242477;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidepanel a, .sidepanel p {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #b8b8b8;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidepanel a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+  
+  #buttonbackground{
+    background-color:#24242477;
+    width: 100vw;
+    height: 6.4vh;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+  }
+
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #242424;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    font-family: 'Heebo';
+  }
+  
+  .openbtn:hover {
+    background-color:#444;
+  }
+
+  .statButtons{
+    width: 20vw;
+    height: 5vh;
+    background-color: #242424;
+    border: none;
+    color: white;
+    font-family: 'Heebo';
+    font-size: 18px;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  .innerPanels{
+    background-color: #2424248f;
+    height: 23vh;
+    padding:0;
+    width: 20vw;
+    left: 0;
+    margin-left: -4%;
+  }
+
+  #panelText{
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    display: block;
+    word-wrap: break-word;
+    z-index: -5;
+    padding: 0;
+    margin-top: 15%;
+    font-family: 'Heebo';
+  }
+
+  #measure{
+    font-size: 18px;
+  }
+  
+  #innerOverlayText{
+    font-size: 12px;
+    word-wrap: break-word;
+    margin:0;
+    padding:5px;
+  }
+
+  #innerOverlay1, #innerOverlay2, #innerOverlay3, #innerOverlay4{
+    position: fixed;
+    z-index: -1;
+    height: 0vh;
+    overflow: hidden;
+    width: 20vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #242424;
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+
+/* RIGHT PANNEL */
+
+  .sidepanelRight  {
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    height: 250px;
+    top: 0;
+    right: 0;
+    background-color: #242424;
+    overflow: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .sidepanelRight a, .sidepanelRight p {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidepanelRight a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidepanelRight .closebtnRight {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 36px;
+  }
+  
+  .openbtnRight {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #242424;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    height: 100vh;
+    right: 0;
+    position: absolute;
+    width: 50px;
+    top:0;
+    z-index: 0;
+  }
+
+  #settingsText{
+    transform: rotate(270deg);
+  }
+  
+  .openbtnRight:hover {
+    background-color:#444;
+  }
+
+label{
+  display: block;
+  color: white;
+  text-align: center;
+  border-radius: 0px 12px 12px 0px;
+  border: solid 2px transparent;
+  background: #242424;
+  justify-content: left;
+  align-items: left;
+  flex-direction: row;
+  display: flex;
+  top:-5%;
+  width: 40%;
+  box-shadow: 4px 4px 5px rgba(27, 27, 27, 0.6);
+}
+
+#title, #subtitle{
+  text-align: center;
+  color: white;
+}
+
+#subtitle{
+  font-size: 14px;
+  margin-top: -10%;
+}
