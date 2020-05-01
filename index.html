@@ -8,81 +8,81 @@
   </head>
 
   <body>
-    <script src="../src/script.js"></script>
+    
     <!-- LEFT PANEL -->
     <div id="mySidepanel" class="sidepanel">
       
       <div id="innerPanelOne" class="innerPanels">
-        <button id="statOne" class="statButtons" onclick="openInnerOne()">Global Average Temp Rise</button>
+        <button id="statOne" class="statButtons" >Global Average Temp Rise</button>
         <div id="innerOverlay1" style="z-index: 4"><p id="innerOverlayText">Global warming is terrrible oh no</p></div>
         <p id="panelText">15<span id="measure">°C</span></p>
       </div>
 
-      <div id="innerPanelTwo" class="innerPanels" onclick="openInnerTwo()">
+      <div id="innerPanelTwo" class="innerPanels" >
         <button id="statTwo" class="statButtons">Sea Level Rise</button>
         <div id="innerOverlay2" style="z-index: 4"><p id="innerOverlayText"> Sea levels r gettig bigger oh gosh oh no</p></div>
         <p id="panelText">3<span id="measure">mm</span></p>
       </div>
 
-      <div id="innerPanelThree" class="innerPanels" onclick="openInnerThree()">
+      <div id="innerPanelThree" class="innerPanels" >
         <button id="statThree" class="statButtons">CO2 in the Atmosphere</button>
         <div id="innerOverlay3" style="z-index: 4"><p id="innerOverlayText">co2 is a big nono and cna be really ba on</p></div>
         <p id="panelText">2000<span id="measure">ppm</span></p>
       </div>
 
-      <div id="innerPanelFour" class="innerPanels" onclick="openInnerFour()">
+      <div id="innerPanelFour" class="innerPanels" >
         <button id="statFour" class="statButtons">Arctic Circle Snow</button>
         <div id="innerOverlay4" style="z-index: 4"><p id="innerOverlayText"> big bears like big snow be nie to big animals be</p></div>
         <p id="panelText">4.9<span id="measure"> extend msk</span></p>
       </div>
     </div>
     <div id="buttonbackground">
-    <button class="openbtn" onclick="openNav()">Statistics</button>  
+    <button id="navOne" class="openbtn" >Statistics</button>  
   </div>
 
     <!-- RIGHT PANEL -->
     <div id="mySidepanelRight" class="sidepanelRight">
-      <a href="javascript:void(0)" class="closebtnRight" onclick="closeNavRight()">×</a> 
+      <a href="javascript:void(0)" id="closeRight" class="closebtnRight" >×</a> 
       <div id="createSimulation">
           <p id="title">Imagine the Amazon Rainforest</p>
           <p id="subtitle"> The visualizer will show an outcome of the Amazon based on your choices</p>
 
           <div class="option">
             <label for="corps" id="corpsLabel">Impact of Corportations</label>
-            <input type="range" min="1" max="100" value="50" class="slider" id="corpsSlider" oninput="corpsChange(this.value)">
+            <input type="range" min="1" max="100" value="50" class="slider" id="corpsSlider" >
           </div>
 
           <div class="option">
             <label for="deforest">Deforestation</label>
-            <input type="range" min="1" max="100" value="50" class="slider" id="deforestSlider" oninput="deforestChange(this.value)">
+            <input type="range" min="1" max="100" value="50" class="slider" id="deforestSlider">
           </div>
 
           <div class="option">
             <label for="carbonCap">Carbon Capture Technology</label>
-            <input type="range" min="1" max="100" value="50" class="slider" id="carbonCapSlider" oninput="carbonCapChange(this.value)">
+            <input type="range" min="1" max="100" value="50" class="slider" id="carbonCapSlider" >
           </div>
 
           <div class="option">
             <label for="renew">Renewable Energy</label>
-            <input type="range" min="1" max="100" value="50" class="slider" id="renewSlider" oninput="renewChange(this.value)">
+            <input type="range" min="1" max="100" value="50" class="slider" id="renewSlider" >
           </div>
 
           <div class="option">
             <label for="population">Population on Earth</label>
-            <input type="range" min="1" max="100" value="50" class="slider" id="populationSlider" oninput="populationChange(this.value)">
+            <input type="range" min="1" max="100" value="50" class="slider" id="populationSlider" >
           </div>
 
           <div class="option">
             <label for="transport">Public Transport</label>
-            <input type="range" min="1" max="100" value="50" class="slider" id="transportSlider" oninput="transportChange(this.value)">
+            <input type="range" min="1" max="100" value="50" class="slider" id="transportSlider">
           </div>
           
           <button id="simulate">Simulate</button>
         </div>
     </div>
     
-    <button class="openbtnRight" onclick="openNavRight()"><p id="settingsText">Settings</p></button>  
+    <button id="openRight" class="openbtnRight"><p id="settingsText">Settings</p></button>  
 
-    
+    <script src="./src/script.js"></script>
   </body>
 </html>

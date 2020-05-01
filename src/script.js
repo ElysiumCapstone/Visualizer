@@ -9,6 +9,16 @@ var innerOverlayFour = document.getElementById("innerOverlay4");
 
 var styleBlock = document.getElementById("buttonbackground");
 
+//sliders
+let corpSlider = document.querySelector("#corpsSlider");
+let deforestSlider = document.querySelector("#deforestSlider");
+let carbonCapSlider = document.querySelector("#carbonCapSlider");
+let renewSlider = document.querySelector("#renewSlider");
+let populationSlider = document.querySelector("#populationSlider");
+let transportSlider = document.querySelector("#transportSlider");
+let simButton = document.querySelector("#simulate");
+
+
 //button function for left panel
 function openNav() {
   if(sidePanel.style.width == "100%"){
@@ -106,28 +116,51 @@ function closeInnerNavFour(){
 
 
 function corpsChange(e) {
-  document.querySelector("#corpsSlider").style.background = 'linear-gradient(to right, #2EFFCD 0%, #2EFFCD ' + e + '%, #414C53 ' + e + '%, #414C53 100%)'
+  document.querySelector("#corpsSlider").style.background = 'linear-gradient(to right, #2EFFCD 0%, #2EFFCD ' + corpSlider.value + '%, #414C53 ' + corpSlider.value + '%, #414C53 100%)'
 };
 
 function deforestChange(e) {
-  document.querySelector("#deforestSlider").style.background = 'linear-gradient(to right, #2EFFCD 0%, #2EFFCD ' + e + '%, #414C53 ' + e + '%, #414C53 100%)'
+  document.querySelector("#deforestSlider").style.background = 'linear-gradient(to right, #2EFFCD 0%, #2EFFCD ' + deforestSlider.valuee + '%, #414C53 ' + deforestSlider.value + '%, #414C53 100%)'
 };
 
 function carbonCapChange(e) {
-  document.querySelector("#carbonCapSlider").style.background = 'linear-gradient(to right, #2EFFCD 0%, #2EFFCD ' + e + '%, #414C53 ' + e + '%, #414C53 100%)'
+  document.querySelector("#carbonCapSlider").style.background = 'linear-gradient(to right, #2EFFCD 0%, #2EFFCD ' + carbonCapSlider.value + '%, #414C53 ' + carbonCapSlider.value + '%, #414C53 100%)'
 };
 
 function renewChange(e) {
-  document.querySelector("#renewSlider").style.background = 'linear-gradient(to right, #2EFFCD 0%, #2EFFCD ' + e + '%, #414C53 ' + e + '%, #414C53 100%)'
+  document.querySelector("#renewSlider").style.background = 'linear-gradient(to right, #2EFFCD 0%, #2EFFCD ' + renewSlider.valuee + '%, #414C53 ' + renewSlider.value + '%, #414C53 100%)'
 };
 
 function populationChange(e) {
-  document.querySelector("#populationSlider").style.background = 'linear-gradient(to right, #2EFFCD 0%, #2EFFCD ' + e + '%, #414C53 ' + e + '%, #414C53 100%)'
+  document.querySelector("#populationSlider").style.background = 'linear-gradient(to right, #2EFFCD 0%, #2EFFCD ' + populationSlider.value + '%, #414C53 ' + populationSlider.value + '%, #414C53 100%)'
 };
 
 function transportChange(e) {
-  document.querySelector("#transportSlider").style.background = 'linear-gradient(to right, #2EFFCD 0%, #2EFFCD ' + e + '%, #414C53 ' + e + '%, #414C53 100%)'
+  document.querySelector("#transportSlider").style.background = 'linear-gradient(to right, #2EFFCD 0%, #2EFFCD ' + transportSlider.value + '%, #414C53 ' + transportSlider.value + '%, #414C53 100%)'
 };
+
+corpSlider.oninput = corpsChange;
+deforestSlider.oninput = deforestChange;
+carbonCapSlider.oninput = carbonCapChange;
+renewSlider.oninput = renewChange;
+populationSlider.oninput = populationChange;
+transportSlider.oninput = transportChange;
+
+let innerPanelOne = document.querySelector("#statOne");
+innerPanelOne.onclick = openInnerOne;
+let innerPanelTwo = document.querySelector("#innerPanelTwo");
+innerPanelTwo.onclick = openInnerTwo;
+let innerPanelThree = document.querySelector("#innerPanelThree");
+innerPanelThree.onclick = openInnerThree;
+let innerPanelFour = document.querySelector("#innerPanelFour");
+innerPanelFour.onclick = openInnerFour;
+let navOne = document.querySelector("#navOne");
+navOne.onclick = openNav;
+let closeRight = document.querySelector("#closeRight");
+closeRight.onclick = closeNavRight;
+let openRight = document.querySelector("#openRight");
+openRight.onclick = openNavRight;
+
 //NEXT:
 //when you input algorithm, just change the html.style.background to the correct image given. 
 
@@ -140,13 +173,13 @@ function transportChange(e) {
 //Factories : 8;
 /* WEIGHTS */
 
-let corpSlider = document.querySelector("#corpsSlider");
-let deforestSlider = document.querySelector("#deforestSlider");
-let carbonCapSlider = document.querySelector("#carbonCapSlider");
-let renewSlider = document.querySelector("#renewSlider");
-let populationSlider = document.querySelector("#populationSlider");
-let transportSlider = document.querySelector("#transportSlider");
-let simButton = document.querySelector("#simulate");
+
+
+
+
+
+
+
 
 function simulate(){ //adds all slider values together, takes average, then checks where the output is
   let deforestVal = deforestSlider.value * 4; // deforestation
