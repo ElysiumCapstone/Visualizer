@@ -201,13 +201,13 @@ function simulate(){ //adds all slider values together, takes average, then chec
   // 588 376 188
 
   if(avg <= 188){
-    document.querySelector("html").style.background = "url('../media/healthy_forest.jpg')"; //gets the html object and resets bckgrnd
+    document.querySelector("html").style.background = "url('media/healthy_forest.jpg')"; //gets the html object and resets bckgrnd
   }
   else if(avg > 188 && avg <= 376){
-    document.querySelector("html").style.background = "url('../media/Tipping_Point_Edited.png')";
+    document.querySelector("html").style.background = "url('media/Tipping_Point_Edited.png')";
   }
   else{
-    document.querySelector("html").style.background = "url('../media/unhealthy_forest-01.png')";
+    document.querySelector("html").style.background = "url('media/unhealthy_forest-01.png')";
   }
 }
 
