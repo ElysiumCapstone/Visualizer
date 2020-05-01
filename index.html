@@ -8,81 +8,101 @@
   </head>
 
   <body>
-    
     <!-- LEFT PANEL -->
     <div id="mySidepanel" class="sidepanel">
-      
+
       <div id="innerPanelOne" class="innerPanels">
-        <button id="statOne" class="statButtons" >Global Average Temp Rise</button>
-        <div id="innerOverlay1" style="z-index: 4"><p id="innerOverlayText">Global warming is terrrible oh no</p></div>
-        <p id="panelText">15<span id="measure">°C</span></p>
+        <button id="statOne" class="statButtons" onmouseover="openInnerOne()" onmouseout="closeInnerNavOne()">Global Average Temp Rise</button>
+        <div id="innerOverlay1" style="z-index: 4"><p id="innerOverlayText">The interactions of climate change and climate responses with sustainable development including sustainable development impacts at 1.5°C and 2°C.</p></div>
+        <p id="panelText1">15°C</p>
       </div>
 
-      <div id="innerPanelTwo" class="innerPanels" >
+      <div id="innerPanelTwo" class="innerPanels" onmouseover="openInnerTwo()" onmouseout="closeInnerNavTwo()">
         <button id="statTwo" class="statButtons">Sea Level Rise</button>
-        <div id="innerOverlay2" style="z-index: 4"><p id="innerOverlayText"> Sea levels r gettig bigger oh gosh oh no</p></div>
-        <p id="panelText">3<span id="measure">mm</span></p>
+        <div id="innerOverlay2" style="z-index: 4"><p id="innerOverlayText">A rise in sea levels of even a few meters can endanger thousands of miles of coastline. Considering majority of humans live near a coast, thousands of lives could be affected.</p></div>
+        <p id="panelText2">3mm</p>
       </div>
 
-      <div id="innerPanelThree" class="innerPanels" >
+      <div id="innerPanelThree" class="innerPanels" onmouseover="openInnerThree()"" onmouseout="closeInnerNavThree()">
         <button id="statThree" class="statButtons">CO2 in the Atmosphere</button>
-        <div id="innerOverlay3" style="z-index: 4"><p id="innerOverlayText">co2 is a big nono and cna be really ba on</p></div>
-        <p id="panelText">2000<span id="measure">ppm</span></p>
+        <div id="innerOverlay3" style="z-index: 4"><p id="innerOverlayText">Carbon Dioxide is a heat trapping gas, and accumulation of it drives the greenhouse effect. As CO2 levels rise, the greenhouse effect becomes more intense, which heats the atmosphere.</p></div>
+        <p id="panelText3">2000ppm</p>
       </div>
 
-      <div id="innerPanelFour" class="innerPanels" >
+      <div id="innerPanelFour" class="innerPanels" onmouseover="openInnerFour()" onmouseout="closeInnerNavFour()">
         <button id="statFour" class="statButtons">Arctic Circle Snow</button>
-        <div id="innerOverlay4" style="z-index: 4"><p id="innerOverlayText"> big bears like big snow be nie to big animals be</p></div>
-        <p id="panelText">4.9<span id="measure"> extend msk</span></p>
+        <div id="innerOverlay4" style="z-index: 4"><p id="innerOverlayText">Ice and snow cover in the arctic reflects sunlight, in something called the albedo effect. Ice alone can reflect 40% of sunlight, and ice covered in snow can reflect up to 80% of sunlight.</p></div>
+        <p id="panelText4">4.9 extend msk</p>
       </div>
     </div>
     <div id="buttonbackground">
-    <button id="navOne" class="openbtn" >Statistics</button>  
+    <button class="openbtn" onclick="openNav()">Statistics</button>  
   </div>
 
     <!-- RIGHT PANEL -->
     <div id="mySidepanelRight" class="sidepanelRight">
-      <a href="javascript:void(0)" id="closeRight" class="closebtnRight" >×</a> 
+      <a href="javascript:void(0)" class="closebtnRight" onclick="closeNavRight()">×</a> 
       <div id="createSimulation">
+
+        <div id="titleSubtitle">
           <p id="title">Imagine the Amazon Rainforest</p>
           <p id="subtitle"> The visualizer will show an outcome of the Amazon based on your choices</p>
+        </div>
 
           <div class="option">
-            <label for="corps" id="corpsLabel">Impact of Corportations</label>
-            <input type="range" min="1" max="100" value="50" class="slider" id="corpsSlider" >
+            <label for="corps" id="corpsLabel">Impact of Corportations
+              <button class="info" onmouseover="openCorpInfo()" onmouseout="closeCorpInfo()">?</button>
+            </label>
+            <span class="infoText" id="corpsInfoText">The world's 3,000 largest companies cause $2.2 trillion in environmental damage every year. Limiting the impact of corporations by reducing carbon output, air pollution, and damage caused by over-use can improve how the environment survives human activity. </span>
+          <span class="percentages">0%<input type="range" min="1" max="100" value="50" class="slider" id="corpsSlider" oninput="corpsChange(this.value)">100%</span>
           </div>
 
           <div class="option">
-            <label for="deforest">Deforestation</label>
-            <input type="range" min="1" max="100" value="50" class="slider" id="deforestSlider">
+            <label for="deforest" id="deforestLabel">Deforestation
+              <button class="info" onmouseover="openDeforestInfo()" onmouseout="closeDeforestInfo()">?</button>
+            </label>
+            <span class="infoText" id="deforestInfoText">Trees are a natural carbon sink. They naturally absorb carbon dioxide from the air and turn it into oxygen, reducing the greenhouse gasses in the atmosphere. If deforestation levels are low, then more trees can absorb carbon.</span>
+            <span class="percentages">0%<input type="range" min="1" max="100" value="50" class="slider" id="deforestSlider" oninput="deforestChange(this.value)">100%</span>
           </div>
 
           <div class="option">
-            <label for="carbonCap">Carbon Capture Technology</label>
-            <input type="range" min="1" max="100" value="50" class="slider" id="carbonCapSlider" >
+            <label for="carbonCap" id="carbonLabel">Carbon Capture Technology
+              <button class="info" onmouseover="openCarbonInfo()" onmouseout="closeCarbonInfo()">?</button>
+            </label>
+            <span class="infoText" id="carbonInfoText">Technology that can actively reduce the amount of carbon in the air can greatly impact global warming and climate change. Limited greenhouse gasses in the air slow down the feedback loops that might damage the Amazon ecosystem beyond repair.</span>
+            <span class="percentages">0%<input type="range" min="1" max="100" value="50" class="slider" id="carbonCapSlider" oninput="carbonCapChange(this.value)">100%</span>
           </div>
 
           <div class="option">
-            <label for="renew">Renewable Energy</label>
-            <input type="range" min="1" max="100" value="50" class="slider" id="renewSlider" >
+            <label for="renew" id="renewLabel">Renewable Energy
+              <button class="info" onmouseover="openRenewInfo()" onmouseout="closeRenewInfo()">?</button>
+            </label>
+            <span class="infoText" id="renewInfoText">Using renewable energy instead of fossil fuels limit the expulsion of greenhouse gasses. Things like solar, wind, and geothermal energy can power our cities and homes without as much damage to the environment. </span>
+            <span class="percentages">0%<input type="range" min="1" max="100" value="50" class="slider" id="renewSlider" oninput="renewChange(this.value)">100%</span>
           </div>
 
           <div class="option">
-            <label for="population">Population on Earth</label>
-            <input type="range" min="1" max="100" value="50" class="slider" id="populationSlider" >
+            <label for="population">Population on Earth
+              <button class="info" onmouseover="openPopInfo()" onmouseout="closePopInfo()">?</button>
+            </label>
+            <span class="infoText" id="popInfoText">Every human uses energy in their daily life, in the energy it takes to produce our food and power our homes every day. When there are less humans living on Earth, there’s less energy needed to maintain civilization.</span>
+            <span class="percentages">0%<input type="range" min="1" max="100" value="50" class="slider" id="populationSlider" oninput="populationChange(this.value)">100%</span>
           </div>
 
           <div class="option">
-            <label for="transport">Public Transport</label>
-            <input type="range" min="1" max="100" value="50" class="slider" id="transportSlider">
+            <label for="transport" id="transLabel">Public Transport
+              <button class="info" onmouseover="openTransInfo()" onmouseout="closeTransInfo()">?</button>
+            </label>
+            <span class="infoText"  id="transInfoText">If more people share one vehicle, less people burn energy in their personal vehicles. One bus fit as many people as around 60 cars. It’s simple math! High usage of public transport can help lower greenhouse gas emissions. </span>
+            <span class="percentages">0%<input type="range" min="1" max="100" value="50" class="slider" id="transportSlider" oninput="transportChange(this.value)">100%</span>
           </div>
           
           <button id="simulate">Simulate</button>
         </div>
     </div>
     
-    <button id="openRight" class="openbtnRight"><p id="settingsText">Settings</p></button>  
+    <button class="openbtnRight" onclick="openNavRight()"><p id="settingsText">Settings</p></button>  
 
-    <script src="./src/script.js"></script>
+    <script src="../src/script.js"></script>
   </body>
 </html>

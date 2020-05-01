@@ -173,14 +173,6 @@ openRight.onclick = openNavRight;
 //Factories : 8;
 /* WEIGHTS */
 
-
-
-
-
-
-
-
-
 function simulate(){ //adds all slider values together, takes average, then checks where the output is
   let deforestVal = deforestSlider.value * 4; // deforestation
   console.log(deforestVal);
@@ -200,6 +192,11 @@ function simulate(){ //adds all slider values together, takes average, then chec
   console.log(avg);
   // 588 376 188
 
+  //show bottom panel when user simulates
+  document.querySelector(".sidepanel").style.visibility = "visible";
+  document.querySelector(".openbtn").style.visibility = "visible";
+  document.querySelector("#buttonbackground").style.visibility = "visible";
+
   if(avg <= 188){
     document.querySelector("html").style.background = "url('media/healthy_forest.jpg')"; //gets the html object and resets bckgrnd
   }
@@ -212,3 +209,56 @@ function simulate(){ //adds all slider values together, takes average, then chec
 }
 
 simButton.onclick = simulate; //gotta set that mean on click
+
+//functions for hover buttons
+//corps
+function openCorpInfo(){
+  corpInfo.style.visibility = "visible";
+ }
+ function closeCorpInfo(){
+  corpInfo.style.visibility = "hidden";
+ }
+ 
+ //deforest
+ function openDeforestInfo(){
+   deforestInfo.style.visibility = "visible";
+ }
+ 
+ function closeDeforestInfo(){
+   deforestInfo.style.visibility = "hidden";
+ }
+ 
+ //carbon
+ function openCarbonInfo(){
+   carbonInfo.style.visibility = "visible";
+ }
+ 
+ function closeCarbonInfo(){
+   carbonInfo.style.visibility = "hidden";
+ }
+ 
+ //renew
+ function openRenewInfo(){
+   renewInfo.style.visibility = "visible";
+ }
+ 
+ function closeRenewInfo(){
+   renewInfo.style.visibility = "hidden";
+ }
+ 
+ //population
+ function openPopInfo(){
+   popInfo.style.visibility = "visible";
+ }
+ function closePopInfo(){
+   popInfo.style.visibility = "hidden";
+ }
+ 
+ //transportation
+ function openTransInfo(){
+   transInfo.style.visibility = "visible";
+ }
+ function closeTransInfo(){
+   transInfo.style.visibility = "hidden";
+ }
+ 
