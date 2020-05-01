@@ -120,7 +120,7 @@ function corpsChange(e) {
 };
 
 function deforestChange(e) {
-  document.querySelector("#deforestSlider").style.background = 'linear-gradient(to right, #2EFFCD 0%, #2EFFCD ' + deforestSlider.valuee + '%, #414C53 ' + deforestSlider.value + '%, #414C53 100%)'
+  document.querySelector("#deforestSlider").style.background = 'linear-gradient(to right, #2EFFCD 0%, #2EFFCD ' + deforestSlider.value + '%, #414C53 ' + deforestSlider.value + '%, #414C53 100%)'
 };
 
 function carbonCapChange(e) {
@@ -128,7 +128,7 @@ function carbonCapChange(e) {
 };
 
 function renewChange(e) {
-  document.querySelector("#renewSlider").style.background = 'linear-gradient(to right, #2EFFCD 0%, #2EFFCD ' + renewSlider.valuee + '%, #414C53 ' + renewSlider.value + '%, #414C53 100%)'
+  document.querySelector("#renewSlider").style.background = 'linear-gradient(to right, #2EFFCD 0%, #2EFFCD ' + renewSlider.value + '%, #414C53 ' + renewSlider.value + '%, #414C53 100%)'
 };
 
 function populationChange(e) {
